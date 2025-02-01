@@ -19,6 +19,10 @@ Weather_API_Endpoint = `https://api.openweathermap.org/data/2.5/weather?lat=23.7
 Weather_Data_Endpoint = `https://api.openweathermap.org/data/2.5/forecast?lat=40.7127281&lon=-74.0060152&units=metric&appid=eca73db0966d1b4f704cebf91c07ee75&`
 
 function findUserLocation() {
+    if (userInput.value === "") {
+        alert("Please enetr a city name.");
+        return;
+    }
     forecast.innerHTML = "";
     fetch(Weather_API_Endpoint + userInput.value)
         .then(res => res.json())
