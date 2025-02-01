@@ -26,7 +26,7 @@ function findUserLocation() {
             console.log(data);
 
             if (data.cod != "" && data.cod != 200) {
-                alert("Opps! The city you entered was not found. Please check the spelling or try another location");
+                alert("City not found. Please check the spelling or try another location.");
                 return;
             }
 
